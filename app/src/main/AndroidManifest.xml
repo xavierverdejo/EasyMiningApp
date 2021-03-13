@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.easyminingapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/easylogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/easylogo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EasyMiningApp">
+        <activity android:name=".rigs.ShowGrafica"></activity>
+        <activity android:name=".rigs.ShowRig" />
+        <activity android:name=".rigs.NewRig" />
+        <activity android:name=".ProfitList" />
+        <activity android:name=".ElectricityCostCalculator" />
+        <activity android:name=".ShowAllProfitObject" />
+        <activity android:name=".ProfitResult" />
+        <activity android:name=".ProfitCalculator" />
+        <activity android:name=".rigs.RigList" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

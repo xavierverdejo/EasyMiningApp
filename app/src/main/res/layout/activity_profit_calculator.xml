@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculateButton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context=".ProfitCalculator">
+
+    <EditText
+        android:id="@+id/coinPerMhEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="0.01"
+        android:inputType="numberDecimal"
+        android:textColor="#FFAE00"
+        android:textColorHint="#FFFFD270"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/item_background"
+        android:padding="15dp"
+        android:text="Reward per MH/s (in €)"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poolFeeEditText" />
+
+    <EditText
+        android:id="@+id/poolFeeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        android:textColor="#FFAE00"
+        android:textColorHint="#FFFFD270"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/item_background"
+        android:padding="15dp"
+        android:text="Pool fee (%)"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costPerKwEditText" />
+
+    <EditText
+        android:id="@+id/costPerKwEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="0.15"
+        android:inputType="numberDecimal"
+        android:textColor="#FFAE00"
+        android:textColorHint="#FFFFD270"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/item_background"
+        android:padding="15dp"
+        android:text="Cost per KWh (€)"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerEditText" />
+
+    <EditText
+        android:id="@+id/powerEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Watts"
+        android:inputType="number"
+        android:textColor="#FFAE00"
+        android:textColorHint="#FFFFD270"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/item_background"
+        android:padding="15dp"
+        android:text="Hashing power"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/item_background"
+        android:padding="15dp"
+        android:text="Power consumption (w)"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hashEditText" />
+
+    <EditText
+        android:id="@+id/hashEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="MH/s"
+        android:inputType="number"
+        android:textColor="#FFAE00"
+        android:textColorHint="#FFFFD270"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="openResult"
+        android:text="Calculate"
+        android:backgroundTint="#FFAE00"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
